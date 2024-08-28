@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import AxiosService from '@/services/AxiosService';
+import axios from 'axios';
 import { ref, computed } from 'vue';
 import { useContactFormModalStore } from '@/stores/contactFormModal';
 import type { WritableComputedRef } from 'vue';
@@ -52,7 +52,18 @@ const lastName = ref('');
 const email = ref('');
 const message = ref('');
 
-const sendEmail = async () => {};
+const sendEmail = async (to: string, subject: string, text: string) => {
+  try {
+    const response = await axios.post('/api/sendEmail', {
+      to,
+      subject,
+      text
+    });
+    console.log(response.data.message);
+  } catch (error) {
+    console.error('Error sending email:', error);
+  }
+};
 </script>
 
 <style scoped lang="scss"></style>
