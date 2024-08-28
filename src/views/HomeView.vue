@@ -4,6 +4,7 @@
     <ReviewList />
     <BenefitsList />
     <ContactModal :active-product-name="activeProduct?.title" v-if="activeProduct?.title" />
+    <Footer />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import { onMounted, computed } from 'vue';
 import { useProductsStore } from '@/stores/products';
 import { storeToRefs } from 'pinia';
 import Hero from '@/components/Hero.vue';
+import Footer from '@/components/Footer.vue';
 import type { ComputedRef } from 'vue';
 import type { Product } from '@/types/product';
 import ReviewList from '@/components/ReviewList.vue';
