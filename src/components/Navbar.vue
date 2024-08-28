@@ -40,10 +40,15 @@ const scrollToElement = (elementId: string): void => {
     const offset = 150;
     const topPosition = element.getBoundingClientRect().top + window.scrollY - offset;
 
-    window.scrollTo({ top: topPosition, behavior: 'smooth' });
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+    const scrollBehavior = isFirefox ? 'instant' : 'smooth';
+
+    window.scrollTo({
+      top: topPosition,
+      behavior: scrollBehavior
+    });
   }
 };
-
 const items: Ref<MenuItem[]> = ref([
   {
     label: 'Product',
