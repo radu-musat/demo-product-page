@@ -26,7 +26,7 @@
         severity="secondary"
         @click="contactFormModalStore.toggleModal()"
       />
-      <Button type="button" label="Send" @click="sendEmail" />
+      <Button type="button" label="Send" @click="sendEmail(email, 'demo app order details')" />
     </div>
   </Dialog>
 </template>
@@ -52,7 +52,16 @@ const lastName = ref('');
 const email = ref('');
 const message = ref('');
 
-const sendEmail = async (to: string, subject: string, text: string) => {
+const sendEmail = async (to: string, subject: string) => {
+  const text = `
+    Hello thanks for checking out the demo app.
+    Here are de the details for your fictive order.
+
+    Name of client: ${firstName.value} ${lastName.value}
+    The message attached to the contact form:
+    ${message.value}
+  `;
+
   try {
     const response = await axios.post('/api/sendEmail', {
       to,
