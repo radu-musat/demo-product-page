@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 bg-stone-100">
+  <nav class="sticky top-0 bg-stone-100 z-50">
     <Menubar :model="items" class="container !border-none md:mb-1 !rounded-none !bg-stone-100">
       <template #start>
         <img class="max-w-24 rounded" src="@/assets/img/logo.png" alt="logo" />
@@ -35,7 +35,6 @@ import type { MenuItem } from 'primevue/menuitem';
 
 const contactFormModalStore = useContactFormModalStore();
 const scrollToElement = (elementId: string): void => {
-  console.log('ss');
   const element = document.getElementById(elementId);
   if (element) {
     const offset = 150;
@@ -57,7 +56,6 @@ const items: Ref<MenuItem[]> = ref([
   {
     label: 'Contact',
     callBack: () => {
-      console.log('test');
       contactFormModalStore.toggleModal();
     }
   }

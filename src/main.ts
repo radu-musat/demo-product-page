@@ -5,6 +5,7 @@ import Aura from '@primevue/themes/aura';
 import App from './App.vue';
 import router from './router';
 import GlobalComponents from '@/plugins/GlobalComponents';
+import ToastService from 'primevue/toastservice';
 import './assets/sass/global.scss';
 
 const app = createApp(App);
@@ -19,5 +20,6 @@ app.use(PrimeVue, {
     }
   }
 });
+app.use(ToastService);
 app.use(GlobalComponents);
 app.mount('#app');

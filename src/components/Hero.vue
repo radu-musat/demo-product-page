@@ -10,20 +10,20 @@
         {{ product.description }}
       </p>
       <div class="flex flex-col gap-2 justify-center sm:justify-start sm:flex-row items-center">
-        <a
+        <Button
           href="#"
-          class="mr-3 mb-0 bg-teal-400 text-white py-2 px-6 rounded-full text-base font-semibold hover:bg-teal-500 transition duration-300 no-underline"
+          class="mr-3 mb-0 !bg-teal-400 text-white py-2 px-6 !rounded-full text-base font-semibold hover:bg-teal-500 transition duration-300 no-underline"
           @click="contactFormModalStore.toggleModal()"
         >
           Request a Quote
-        </a>
-        <a
+        </Button>
+        <Button
           href="#"
-          class="mr-3 mb-0 bg-teal-400 text-white py-2 px-6 rounded-full text-base font-semibold hover:bg-teal-500 transition duration-300 no-underline"
+          class="mr-3 mb-0 !bg-teal-400 text-white py-2 px-6 !rounded-full text-base font-semibold hover:bg-teal-500 transition duration-300 no-underline"
           @click="$emit('changeProduct')"
         >
           Show Other Product
-        </a>
+        </Button>
       </div>
     </div>
     <!-- Image Section -->

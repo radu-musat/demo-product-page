@@ -1,6 +1,6 @@
 <template>
   <section class="container mb-10" id="reviews">
-    <div class="p-14 bg-teal-500 rounded">
+    <div class="p-5 md:p-14 bg-teal-500 rounded">
       <h2 class="text-center mb-8 md:mb-12">They already made the decision choose our product</h2>
       <div class="flex-col sm:flex-row mx-auto flex flex-wrap gap-4">
         <div

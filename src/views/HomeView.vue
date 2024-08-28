@@ -3,7 +3,7 @@
     <Hero :product="activeProduct" v-if="activeProduct" @change-product="setRandomProduct" />
     <ReviewList />
     <BenefitsList />
-    <ContactModal />
+    <ContactModal :active-product-name="activeProduct?.title" v-if="activeProduct?.title" />
   </main>
 </template>
 
