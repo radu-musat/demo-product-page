@@ -1,5 +1,5 @@
 # demo-product-page
--live preview here https://demo-shop-phi-umber.vercel.app/
+-live preview here https://demo-shop-phi-umber.vercel.app/  
 -built with the default Vue3+Vite template
 
 ## Recommended IDE Setup
