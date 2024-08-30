@@ -1,6 +1,6 @@
-# demo-shop
-
-This template should help get you started developing with Vue 3 in Vite.
+# demo-product-page
+-live preview here https://demo-shop-phi-umber.vercel.app/
+-built with the default Vue3+Vite template
 
 ## Recommended IDE Setup
 
